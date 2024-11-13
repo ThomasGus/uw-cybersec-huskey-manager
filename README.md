@@ -147,4 +147,4 @@ Choose any of the following activities in order to earn 3 points to complete for
 
 - 2 pt Patch the vulnerability that allows logging in without credentials!
 
-- 5 pt AND NO WRITEUP REQUIRED if you can obtain one of your lab partners session id (It's likely you will need to use either advanced XSS or a combination of XSS and SQLi)
+- 3 pt AND NO WRITEUP REQUIRED if you can obtain one of your lab partners session id (It's likely you will need to use either advanced XSS or a combination of XSS and SQLi)
