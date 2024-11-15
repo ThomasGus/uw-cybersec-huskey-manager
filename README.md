@@ -29,6 +29,6 @@ You can receive up to 2 extra credit points :D
 On Saturday night, we will release a lit of all bugs that should have been identified, you then must remediate these bugs to harden our system and protect the password manager from future attacks. If you are unable to find any vulnerabilities before Saturday night, you can still receive full credit for the lab, however you will not be able to get extra credit.
 
 ## For Credit:
-As always, use the [lab writeup template](https://docs.google.com/document/d/1gliRFuhTionjU2jZqHD3-7dV9WwnrsiVSW3QV0cBuBk/edit) to complete this assignment. In your steps to reproduce, outline the steps you took to remediate 3 vulnerabilities in your password manager identified in the bug bounty. These can be ones your group identified, ones that were posted by other groups in the discussion board, or ones that were listed in the release on Saturday. 
+As always, use the lab writeup template to complete this assignment. In your steps to reproduce, outline the steps you took to remediate 3 vulnerabilities in your password manager identified in the bug bounty. These can be ones your group identified, ones that were posted by other groups in the discussion board, or ones that were listed in the release on Saturday. 
 
 Be sure to include evidence that these vulnerabilities are patched. This can be screenshots of code, output of security tools or video walk throughs.
