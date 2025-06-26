@@ -1,9 +1,29 @@
-# Week 2 | MITM
+# Week 2 | Man in the Middle | Updated 2025 Version for Phone/Laptop Attack
 
 Networking plays a pivotal role in the field of cybersecurity, serving as both a critical component and a potential vulnerability. The interconnected nature of modern computer systems underscores the importance of robust networking practices to ensure the integrity, confidentiality, and availability of sensitive information. Cybersecurity professionals heavily rely on network architecture to implement effective defense mechanisms, such as firewalls, intrusion detection and prevention systems, and virtual private networks, to safeguard against unauthorized access and malicious activities. A well-designed and secure network infrastructure enables efficient monitoring and timely response to potential threats, contributing to the overall resilience of an organization's cybersecurity posture. Collaboration and information sharing within the cybersecurity community also heavily depend on effective networking, as it facilitates the dissemination of threat intelligence and the implementation of collective defense strategies. In essence, the strength of cybersecurity measures is intricately linked to the robustness of networking protocols and practices.
 
+## Part 1: Phone Setup
+1. **Connect Both Devices to the Same Wi-Fi**: 
+To perform an ARP spoofing attack, both your computer and phone must be connected to the same local network. Ensure both of your devices are connected to the same Wi-Fi network. If you’re using a mobile hotspot, make sure your laptop is connected to the hotspot created by your phone.
 
-## Part 1: ARP spoofing
+2. **Get Your Phone’s IP Address**: You will need your phone’s IP address in order to spoof it.
+
+	**iPhone:** Go to Settings > Wi-Fi
+Tap the ⓘ icon of the connected Wi-Fi network
+Scroll down for the IP Address
+
+	**Android:** Go to Settings > Network & Internet > Wi-Fi
+Tap the connected network
+Look for IP address under advanced settings
+Write down your phone’s IP address.
+
+3. **Get Your Computer’s IP Address**: Open your terminal or command prompt and run the following command:
+	
+ 	**Windows:** ipconfig Look under ‘Wireless LAN adapter Wi-Fi for IPv4 address
+
+	**MacOS:** ipconfig getifaddr en0
+
+## Part 2: Begin ARP spoofing
 
 For this lab, we will be exploring what information an adversary can extract from your web application in it's current, unencrypted state. In order for you and your group to view each other's network traffic, you will need to perform a [man-in-the-middle](https://www.imperva.com/learn/application-security/man-in-the-middle-attack-mitm/) (MITM) attack. This will allow the victim's network traffic to route through your machine before being sent to the destination network. To do this we will utilize ARP spoofing. Use one of the following tools depending on your OS to perform the attack:
 
@@ -33,13 +53,13 @@ Once you have `arpspoof.exe` downloaded, we can start using it immediately
     And I should get the following output:
 
     ```
-    PS C:\Users\zacko\Downloads> .\arpspoof.exe 192.168.0.101
+    PS C:\Users\mvere\Downloads> .\arpspoof.exe 192.168.0.101
     Resolving victim and target...
     Redirecting 192.168.0.101 (02:1A:4F:8E:7B:9C) ---> 192.168.0.1 (AC:D1:23:45:67:89)
-            and in the other direction
+	and in the other direction
     Press Ctrl+C to stop
     ```
-
+    
 4. Once you have finished the lab and want to end the ARP spoof, you can enter `Ctrl+C` to stop the program from running.
 
 ### Mac ARP Spoofing:
@@ -60,7 +80,7 @@ Homebrew is a package manager for macOS, and allows us to install packages and s
 5. Once you have finished the lab and want to end the ARP spoof, you can enter `Ctrl+C` to stop the program from running.
 
 
-## Part 2: Wireshark
+## Part 3: Wireshark
 
 Now that we have performed our man-in-the-middle attack, we can view all of our victim's network traffic. To do this we will be utilizing [Wireshark](https://www.wireshark.org/), a network traffic analysis tool. Wireshark can allow anyone to view the packets moving across our network. This can pose a serious issue when a web application is not properly utilizing cryptography, allowing any script kiddie to easily view our sensitive data.
 
