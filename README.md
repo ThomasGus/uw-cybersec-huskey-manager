@@ -90,9 +90,23 @@ Now that we have performed our man-in-the-middle attack, we can view all of our 
 
 1. Download Wireshark [here](https://www.wireshark.org/).
 
-2. Once Wireshark is installed, open the application and select the appropriate network interface.
+2. Once Wireshark is installed, open the application and select the appropriate network, “Wi-Fi: en0”. Wireshark will now quickly populate with all network packets being sent to and from your phone
 
-3. Wireshark will now quickly populate with all network packets being sent to and from your victim's computer. While you are monitoring their traffic, have the victim log into their insecure web application. Once they have done so, click the red button at the top of Wireshark to stop recording their network traffic.
+3. Start Docker on your computer.
+
+On your phone’s browser, enter:
+
+http://<computer IP>:80
+
+Replace <computer IP> with your computer’s IP address from earlier.
+For example, if the computer's IP address is 193.167.0.101, you would enter:
+
+http://193.167.0.101:80 in the phone’s browser.
+
+You should now see the web app login page on your phone. Use the login credentials from the previous lab to login to the web app.
+
+Once you have done so, click the red button at the top of Wireshark to stop recording your network traffic.
+
 
 
 
@@ -100,7 +114,7 @@ Now that we have performed our man-in-the-middle attack, we can view all of our 
 
 
 
-3. In the text field at the top of the application, you will see "Apply a display filter", this is where you can set filters to easily sort through your traffic.
+4. In the text field at the top of the application, you will see "Apply a display filter", this is where you can set filters to easily sort through your traffic.
 
     ![Highlighted filter bar](/lab-writeup-imgs/wireshark_filter_bar.png)
 
@@ -112,15 +126,15 @@ Now that we have performed our man-in-the-middle attack, we can view all of our 
 
     ![Applying source filter](/lab-writeup-imgs/apply_src_filter.png)
 
-4. We can now edit the filter to match the source IP address with the victim we were ARP spoofing:
+5. We can now edit the filter to match the source IP address with our phones we were ARP spoofing:
 
     ![Editing filter](/lab-writeup-imgs/edit_filter.png)
 
-5. Now that we are filtering to see traffic from our victim's IP address, let's also sort the packets by protocol. We know that the victim connected to the unencrypted site of HTTP, so we can look for packets that used that protocol:
+6. Now that we are filtering to see traffic from our phone's IP address, let's also sort the packets by protocol. We know that our phone is connected to the unencrypted site of HTTP, so we can look for packets that used that protocol:
 
     ![Sorting by protocol](/lab-writeup-imgs/sort_protocol.png)
 
-6. Look through these packets and see what information you can gather. Below we can see a packet using the POST header to login. Upon further inspection we can see the victim's login credentials in clear text!
+7. Look through these packets and see what information you can gather. Below we can see a packet using the POST header to login. Upon further inspection we can see the our login credentials in clear text!
 
     ![Login credentials](/lab-writeup-imgs/login_credentials.png)
 
