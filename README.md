@@ -95,10 +95,10 @@ Now that we have performed our man-in-the-middle attack, we can view all of our 
 3. Start Docker on your computer.
 
 4. On your phone’s browser, enter:
-   http://[computer IP address]:80
+   `http://[computer IP address]:80`
 
-   Replace [computer IP address] with your computer’s IP address from earlier. For example, if the computer's IP address is 193.167.0.101, you would enter:
-   http://193.167.0.101:80 in the phone’s browser. You should now see the web app login page on your phone. Use the login credentials from the previous lab to login to the web app.
+   Replace [computer IP address] with your computer’s IP address from earlier. For example, if the computer's IP address is `193.167.0.101`, you would enter:
+   `http://193.167.0.101:80`.You should now see the web app login page on your phone. Use the login credentials from the previous lab to login to the web app.
    
 5. Once you have done so, click the red button at the top of Wireshark to stop recording your network traffic.
 
