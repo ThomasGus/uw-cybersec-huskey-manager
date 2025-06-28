@@ -9,10 +9,10 @@ To perform an ARP spoofing attack, both your computer and phone must be connecte
 2. **Get Your Phone’s IP Address**: You will need your phone’s IP address in order to spoof it.
 
 	**iPhone:** Go to Settings > Wi-Fi
-Tap the ⓘ icon of the connected Wi-Fi network.
+Tap the ⓘ icon of the connected Wi-Fi network<br>
 Scroll down to IPV4 Address for the IP Address. Write down the address.
 
-	**Android:** Go to Settings > Network & Internet > Wi-Fi
+	**Android:** Go to Settings > Network & Internet > Wi-Fi<br>
 Tap the connected network.
 Look for IP address under advanced settings.
 Write down your phone’s IP address.
