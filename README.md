@@ -96,9 +96,9 @@ Now that we have performed our man-in-the-middle attack, we can view all of our 
 
 On your phone’s browser, enter:
 
-http://<computer IP>:80
+http://[computer IP address]:80
 
-Replace <computer IP> with your computer’s IP address from earlier.
+Replace [computer IP address] with your computer’s IP address from earlier.
 For example, if the computer's IP address is 193.167.0.101, you would enter:
 
 http://193.167.0.101:80 in the phone’s browser.
