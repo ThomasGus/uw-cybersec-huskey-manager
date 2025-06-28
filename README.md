@@ -10,7 +10,7 @@ To perform an ARP spoofing attack, both your computer and phone must be connecte
 
 	**iPhone:** Go to Settings > Wi-Fi
 Tap the ⓘ icon of the connected Wi-Fi network
-Scroll down for the IP Address
+Scroll down to IPV4 Address for the IP Address. Write down the address.
 
 	**Android:** Go to Settings > Network & Internet > Wi-Fi
 Tap the connected network
@@ -19,9 +19,9 @@ Write down your phone’s IP address.
 
 3. **Get Your Computer’s IP Address**: Open your terminal or command prompt and run the following command:
 	
- 	**Windows:** ipconfig Look under ‘Wireless LAN adapter Wi-Fi for IPv4 address
+ 	**Windows:** `ipconfig Look under` ‘Wireless LAN adapter Wi-Fi for IPv4 address
 
-	**MacOS:** ipconfig getifaddr en0
+	**MacOS:** `ipconfig getifaddr en0`
 
 ## Part 2: Begin ARP spoofing
 
