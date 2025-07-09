@@ -99,7 +99,7 @@ Now that we have our certificate, let's start configuring our nginx server to us
     - This will map our cert/key file to the directory `/etc/nginx/ssl/` in our nginx container.
 
 2. Next, edit your `docker-compose.yaml`file to instruct our nginx server to listen on port 443 instead of port 80.
-    - Under services > server > ports, change the port from `"80:80"` to `"443:443"`.
+    - Under services > router > ports, change the port from `"80:80"` to `"443:443"`.
     - We specify a range of ports that our docker container will listen on, and in this case we only want to listen on 443.
 
 3. Now that we have our certificate in place as well as port 443 open, we can edit our `nginx-default.conf` file to use ssl on port 443.
