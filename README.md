@@ -142,4 +142,4 @@ You should now be able to access the shell connected with the victim's machine! 
 
 ## For credit:
 
-Take a screenshot of the shell session you established, along with the .txt file uploaded by your lab partner!
+Take a screenshot of the shell session you established, along with the payload file code.
