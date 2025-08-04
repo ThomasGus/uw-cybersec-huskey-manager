@@ -75,11 +75,11 @@ Let us see if the SQL Injection identified in ZAP can be used by us! We can clic
 
 ![injection](/lab-writeup-imgs/injection.png)
 
-We can see that ZAP was able to use the SQL Injection `' AND 1=1;-- `, on the login page in the "username" field. Let us breakdown what this injection is doing:
+We can see that ZAP was able to use the SQL Injection `' OR 1=1;-- `, on the login page in the "username" field. Let us breakdown what this injection is doing:
 
 - `'`: The single quote allows us to escape the `username` parameter.
 
-- `AND`: Combines the original query with the injection we are about to add.
+- `OR`: This logical operator allows the condition 1=1 to be evaluated in addition to the original username check.
 
 - `1=1`: This is a statement that will always be true, as 1 will always equal 1. 
 
