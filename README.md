@@ -50,4 +50,4 @@ Feel free to use ChatGPT to write/refine these tests and remediate the vulnerabi
 
 ## For Credit
 
-In the steps to reproduce section, submit screenshots for your 10 pytests that you pass! Make sure they have a descriptive name, show the output of you running all of them.  You will also need to provide screenshots of the code for two of the tests that you believe help reduce the most risk in the application. 
+In the steps to reproduce section, submit screenshots for your 5 pytests that you pass! Make sure they have a descriptive name, show the output of you running all of them.  You will also need to provide screenshots of the code for two of the tests that you believe help reduce the most risk in the application. 
