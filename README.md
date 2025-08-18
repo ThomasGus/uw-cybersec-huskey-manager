@@ -7,7 +7,7 @@
 
 ## Part 1: Using Selenium
 
-In lecture we explored Selenium IDE to help us develop tests to ensure our password manager is functioning in an appropriate way. We are going to take those tests we created in Selenium and add them as pytests to our password manager.
+In section we explored Selenium IDE to help us develop tests to ensure our password manager is functioning in an appropriate way. We are going to take those tests we created in Selenium and add them as pytests to our password manager.
 
 Pytest is a testing framework that allows us to write various kinds of tests to ensure the proper functionality of our application, we can directly export the tests we created in lecture as pytests!
 
