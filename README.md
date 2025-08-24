@@ -27,7 +27,7 @@ Pytest is a testing framework that allows us to write various kinds of tests to 
 
     ![Selecting Export](/lab-writeup-imgs/export_test.png)
 
-4. Export the test as a Python Pytest, and save it to the pytest folder in your password manager.
+4. Export the test as a Python Pytest. Create a new folder "pytest" in your password manager and save it there.
 
     ![Python Pytest](/lab-writeup-imgs/python_pytest.png)
 
