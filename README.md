@@ -89,7 +89,7 @@ This PHP script uses the Monolog library to send our logs to Loggly:
 3. Next, in `docker-compose.yaml` we need to tell our PHP container to read our loggly token environment variable. Let's add a new tag after the `build` header called `environment` assignment our new environment variable to a variable within our PHP container.
     ```
     environment:
-        LOGGLY_TOKEN: ${LOGGLY_TOKEN}"
+        LOGGLY_TOKEN: ${LOGGLY_TOKEN}
     ```
 
     Your PHP service should look like this in your compose file:
@@ -100,7 +100,7 @@ This PHP script uses the Monolog library to send our logs to Loggly:
             dockerfile: ./php/Dockerfile
             target: backend-php-server
         environment:
-            LOGGLY_TOKEN: ${LOGGLY_TOKEN}"
+            LOGGLY_TOKEN: ${LOGGLY_TOKEN}
         extra_hosts:
             - host.docker.internal:host-gateway
     ```
