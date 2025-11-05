@@ -88,7 +88,7 @@ Once we confirmed this is possible, we can proceed with making our malware!
 
     - `-f raw`: This specifies the payload should be 'raw' output, meaning it will just print to our terminal rather than being saved to a file.
 
-2. Once you have run the command above, you should get a large output in your terminal. This is our payload! We can copy it and paste it into a `.txt` file on our machine. Make sure you save it as `reverse_tcp.php`, so that it can be executed as a PHP script.
+2. Once you have run the command above, you should get a large output in your terminal. This is our payload! We can copy it and paste it into a `.txt` file on our machine. Make sure you save it as `reverse_tcp.php`, so that it can be executed as a PHP script. Make sure you save this file under 'webapp > public'.
 
     - Note that the payload will have a comment tag at the beginning. This is to ensure that the payload does not accidentally execute! We can remove this before saving so that the payload will run on our target machine.
 
