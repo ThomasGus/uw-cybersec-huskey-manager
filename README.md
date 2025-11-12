@@ -20,7 +20,7 @@ Bug Bounties are a big part of cybersecurity. In a Bug Bounty, a company will al
 
 For this lab we will be conducting a bug bounty against our password manager! You will need to look through the password manager and identify vulnerabilities, as well as provide suggestions to remediate the vulnerability.
 
-On canvas under discussions, you will see the [bug reporting write up template](https://canvas.uw.edu/courses/1811313/discussion_topics/9789539). Use this template when you identify a vulnerability and submit it as a response to the discussion board.
+On canvas under discussions, you will see the [bug reporting write up template](https://canvas.uw.edu/courses/1830636/discussion_topics/9936750). Use this template when you identify a vulnerability and submit it as a response to the discussion board.
 
 You can receive up to 2 extra credit points :D
 
