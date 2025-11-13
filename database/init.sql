@@ -111,7 +111,7 @@ VALUES
 
 
 -- Assign roles and permissions
-INSERT INTO vault_permissions (permission_id, user_id, vault_id, role   _id)
+INSERT INTO vault_permissions (permission_id, user_id, vault_id, role_id)
 VALUES
     -- Assigning users to the "Developers Vault"
     (2, 1, 1, 3),  -- Username (Viewer)
