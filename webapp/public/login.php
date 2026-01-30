@@ -23,10 +23,11 @@ if ($conn->connect_error) {
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $inputUsername = $_POST['username'];
+    $inputPassword = $_POST['password'];
 
-    $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password' AND approved = 1";
+    $sql = "SELECT * FROM users WHERE username = '$inputUsername' AND password = '$inputPassword' AND approved = 1";
+
     $result = $conn->query($sql);
 
     if($result->num_rows > 0) {
@@ -38,10 +39,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($userFromDB['default_role_id'] == 1)
         {        
-            setcookie('isSiteAdministrator', true, time() + 3600, '/');                
+            setcookie('isSiteAdministrator', true, time() + 3600, '/');  
+            $logger->info("Login admin with username: $inputUsername");              
         }else{
             unset($_COOKIE['isSiteAdministrator']); 
             setcookie('isSiteAdministrator', '', -1, '/'); 
+            $logger->info("Login with username: $inputUsername"); 
         }
         header("Location: index.php");
         exit();
