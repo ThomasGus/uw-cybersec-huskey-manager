@@ -1,7 +1,7 @@
 <?php
 
 include '../components/authenticate.php';
-
+include './components/loggly-logger.php';
 $hostname = 'backend-mysql-database';
 $username = 'user';
 $password = 'supersecretpw';
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     $query = "INSERT INTO users (username, first_name, last_name, email, password, default_role_id) VALUES ('$username', '$first_name', '$last_name', '$email', '$password', 3, 1)";
                     $result = $conn->query($query);
-
+                    $logger->warning("user added with username: $username");
                     if (!$result) {
                       
                         die('A fatal error occurred and has been logged.');
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     $query = "UPDATE users SET username='$username', first_name='$first_name', last_name='$last_name', email='$email', approved='$approved' WHERE user_id=$user_id";
                     $result = $conn->query($query);
-
+                    $logger->warning("User information edits for username: $username");
                     if (!$result) {
                         
                         die("Error editing user: " . $conn->error);

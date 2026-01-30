@@ -1,5 +1,5 @@
 <?php
-
+include './components/loggly-logger.php';
 // Expire the authentication cookie
 unset($_COOKIE['authenticated']); 
 setcookie('authenticated', '', time() - 3600, '/');
@@ -10,6 +10,7 @@ setcookie('isSiteAdministrator', '', -1, '/');
 
 // Redirect to the login page
 header('Location: /login.php');
+$logger->warning("Logout user: $username");
 exit();
 
 ?>
