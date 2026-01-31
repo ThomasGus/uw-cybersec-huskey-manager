@@ -1,5 +1,5 @@
 <?php
-
+include '../components/loggly-logger.php';
 $servername = "backend-mysql-database";
 $username = "user";
 $password = "supersecretpw";
@@ -15,20 +15,22 @@ if ($conn->connect_error) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
-    $username = $_POST['username'];
+    $usernameRequest = $_POST['username'];
     $password = $_POST['password'];
     $firstName = $_POST['first_name'];
     $lastName = $_POST['last_name'];
     $email = $_POST['email'];
-    
+    $logger->info("Account request submitted for username: $usernameRequest");
 
     $sql = "INSERT INTO users (username, first_name, last_name, email, password, default_role_id, approved) 
-            VALUES ('$username', '$firstName', '$lastName', '$email', '$password', 3, 0)";
+            VALUES ('$usernameRequest', '$firstName', '$lastName', '$email', '$password', 3, 0)";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: /login.php");
+        $logger->info("Account request granted for username: $usernameRequest");
         exit();
     } else {
+        $logger->warning("Account request denied for username: $usernameRequest");
         $error_message = 'Error creating account: ' . $conn->error;
     }
 

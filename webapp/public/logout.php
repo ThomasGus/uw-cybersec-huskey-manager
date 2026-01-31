@@ -1,6 +1,5 @@
 <?php
 include './components/loggly-logger.php';
-$logger->info("DEBUG: Cookie raw: " . json_encode($_COOKIE));
 
 $usernameLogout = isset($_COOKIE['authenticated']) ? $_COOKIE['authenticated'] : 'unknown';
 // Expire the authentication cookie
