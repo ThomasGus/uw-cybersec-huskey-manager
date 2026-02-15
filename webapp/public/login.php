@@ -34,18 +34,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
        
         $userFromDB = $result->fetch_assoc();
 
-        //$_COOKIE['authenticated'] = $username;
-        setcookie('authenticated', $inputUsername, time() + 3600, '/');     
+        $_SESSION['authenticated'] = $username;    
 
         if ($userFromDB['default_role_id'] == 1)
         {        
-            setcookie('isSiteAdministrator', true, time() + 3600, '/');  
-            $logger->info("Login admin with username: $inputUsername");              
+            $_SESSION['isSiteAdministrator'] = 1;
+            $logger->info("Login admin with username: $inputUsername");                
         }else{
-            unset($_COOKIE['isSiteAdministrator']); 
-            setcookie('isSiteAdministrator', '', -1, '/'); 
+            unset($_SESSION['isSiteAdministrator']); 
             $logger->info("Login with username: $inputUsername"); 
-        }
+        }   
+
         header("Location: index.php");
         exit();
     } else {
